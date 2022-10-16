@@ -1,10 +1,10 @@
-package kodlama.northwind;
+package com.project.permission;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NorthwindApplicationTests {
+class ComProjectTest {
 
 	@Test
 	void contextLoads() {
