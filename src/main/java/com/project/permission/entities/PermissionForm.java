@@ -34,6 +34,9 @@ public class PermissionForm {
 	@Column(name="permission_day")
 	private int permissionDay;
 	
+	@Column(name="confirm")
+	private String confirm;
+	
 	@ManyToOne
 	@JoinColumn(name = "personel_id")
 	private Personel personel;

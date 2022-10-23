@@ -12,4 +12,7 @@ public interface PermissionFormService {
 
 	DataResult<List<PermissionForm>> getAll();
 	Result add(PermissionForm permissionForm);
+	DataResult<List<PermissionForm>> getByPersonelId(int id);
+	DataResult<List<PermissionForm>> getByPermissionId(int id);
+	Result update(int id,String confirm);
 }

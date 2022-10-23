@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.core.utilities.results.DataResult;
@@ -36,5 +38,17 @@ public PermissionFormController(PermissionFormService permissionFormService) {
 	public Result add(@RequestBody PermissionForm permissionForm) {
 		return this.permissionFormService.add(permissionForm);
 	}
-
+	@GetMapping("getByPersonelId")
+	public DataResult<List<PermissionForm>> getById(int id){
+		return this.permissionFormService.getByPersonelId(id);
+	}
+	@GetMapping("getByPermissionId")
+	public DataResult<List<PermissionForm>> getByPermissionId(int id){
+		return this.permissionFormService.getByPermissionId(id);
+	}
+	@PutMapping("/update")
+	public Result Update(@RequestParam String confirm,int id) {
+		return this.permissionFormService.update(id, confirm);
+	}
+	
 }
