@@ -36,7 +36,7 @@ public class PersonelController {
 	public Result add( @RequestBody Personel personel) {
 		return this.personelService.add(personel);
 	}
-	@GetMapping("/getByNickNameandPaswword")
+	@GetMapping("/getByNickNameandPassword")
 	public DataResult<List<Personel>> getByNickNameandPaswword(String nickName,String password){
 		return this.personelService.getByNickNameandPassword(nickName,password);
 	}
